@@ -14,6 +14,7 @@ searchBtn.addEventListener("click", () => {
   }
 });
 
+// Current weather
 async function getWeather(city) {
   try {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -34,6 +35,7 @@ async function getWeather(city) {
   }
 }
 
+// 5-day forecast
 async function getForecast(city) {
   try {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
@@ -41,7 +43,7 @@ async function getForecast(city) {
     if (!response.ok) throw new Error("Forecast not found");
     const data = await response.json();
     
-
+     // Filter one forecast per day (12:00 PM)
     const dailyForecast = data.list.filter(item => item.dt_txt.includes("12:00:00"));
      
     forecastContainer.innerHTML = dailyForecast.map(day => {
