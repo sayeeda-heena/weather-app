@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #d489ccff, #4b31daff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.app{
+    max-width: 500px;
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sun{
+    display: inline-block;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{
+        transform: translateX(0);
+    }
+     50%{
+        transform: translateX(-8px);
+    }
+     100%{
+        transform: translateX(0);
+    }
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background: #0078ff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.search-box button:hover{
+    background: #005fcc;
+} 
+
+.weather-result {
+    margin-top: 15px;
+}
+
+.waether-result h2 {
+    margin: 5px 0;
+}
+
+.forecast-title {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.forecast{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.forecast-card {
+    background: #84868cff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card img{
+    width: 50px;
+    height: 50px;
+}
