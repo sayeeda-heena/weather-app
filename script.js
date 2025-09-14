@@ -42,7 +42,7 @@ async function getForecast(city) {
     const response = await fetch(url);
     if (!response.ok) throw new Error("Forecast not found");
     const data = await response.json();
-    Hello;
+    
     
      // Filter one forecast per day (12:00 PM)
     const dailyForecast = data.list.filter(item => item.dt_txt.includes("12:00:00"));
